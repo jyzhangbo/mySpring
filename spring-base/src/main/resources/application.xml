@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="diService" class="com.github.base.di.impl.DiService">
+        <constructor-arg ref="diMapper"></constructor-arg>
+    </bean>
+
+    <bean id="diMapper" class="com.github.base.di.impl.DiMapper">
+        <constructor-arg value="#{T(System).out}"></constructor-arg>
+    </bean>
+
+    <bean id="mark" class="com.github.base.aop.AopMark">
+        <constructor-arg value="#{T(System).out}"></constructor-arg>
+    </bean>
+
+    <aop:config>
+        <aop:aspect ref="mark">
+            <aop:pointcut id="aopMark" expression="execution(* *.addService(..))" />
+
+            <aop:before pointcut-ref="aopMark" method="beforeAddMark" />
+
+            <aop:after pointcut-ref="aopMark" method="afterAddMark" />
+        </aop:aspect>
+    </aop:config>
+
+</beans>
