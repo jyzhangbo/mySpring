@@ -13,7 +13,7 @@ public class User {
     private Integer id;
 
     @NotNull
-    @Size(max = 20,min = 2)
+    @Size(max = 20,min = 2,message = "{user.name}")
     private String name;
     @NotNull
     private String address;

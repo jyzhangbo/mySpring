@@ -25,7 +25,8 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping(value = "/regist",method = RequestMethod.GET)
-    public String regist(){
+    public String regist(Model model){
+        model.addAttribute("user",new User());
         return "regist";
     }
 
