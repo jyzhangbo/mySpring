@@ -13,6 +13,7 @@
         <module>spring-bean</module>
         <module>spring-aop</module>
         <module>spring-mvc</module>
+        <module>spring-mvc-thymeleaf</module>
     </modules>
 
 
