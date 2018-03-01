@@ -17,10 +17,11 @@
 
     <div> <s:message code="regist.message"></s:message></div>
     <div>
-        <sf:form method="post" modelAttribute="user">
+        <sf:form method="post" modelAttribute="user" enctype="multipart/form-data">
             name:<sf:input path="name" /><font color="red"><sf:errors path="name"/></font><br/>
             address:<sf:input path="address" /><br/>
             age:<sf:input path="age" /><br/>
+            picture:<input type="file" name="picture" /><br/>
             <input type="submit" value="注册">
         </sf:form>
     </div>

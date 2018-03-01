@@ -8,12 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>home</title>
+    <title>error</title>
 </head>
 <body>
-    <a href="user/list">用户列表</a>
-    <a href="user/list1">用户列表1</a>
-    <a href="user/list2">用户列表2</a>
-    <a href="user/regist">用户注册</a>
+    error
 </body>
 </html>

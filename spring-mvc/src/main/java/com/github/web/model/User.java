@@ -21,6 +21,8 @@ public class User {
     @Max(200)
     private Integer age;
 
+    private String picture;
+
     public Integer getId() {
         return id;
     }
