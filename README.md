@@ -11,4 +11,8 @@
 
 #### spring-sop是关于sop的例子，对应第四章
 
-[AOP基本结束](spring-aop/aop.md)
+[AOP基本介绍](spring-aop/aop.md)
+
+#### spring-security是关于权限的，对应第九章
+
+[security需要注意提防](spring-secu/README.md)
