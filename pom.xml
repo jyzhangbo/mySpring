@@ -17,6 +17,7 @@
         <module>spring-secu</module>
         <module>spring-jdbc</module>
         <module>spring-mongodb</module>
+        <module>spring-redis</module>
     </modules>
 
 
