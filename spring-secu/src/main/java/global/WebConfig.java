@@ -7,6 +7,6 @@ import org.springframework.context.annotation.Configuration;
  * zhangbo
  */
 @Configuration
-@ComponentScan("global")
+@ComponentScan("service")
 public class WebConfig {
 }

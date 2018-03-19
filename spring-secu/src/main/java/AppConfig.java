@@ -1,3 +1,5 @@
+import global.MethodSecurity;
+import global.SecurityConfig;
 import global.WebConfig;
 import mvc.MvcConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
@@ -8,7 +10,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 public class AppConfig extends AbstractAnnotationConfigDispatcherServletInitializer{
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{WebConfig.class};
+        return new Class[]{WebConfig.class, SecurityConfig.class, MethodSecurity.class};
     }
 
     @Override

@@ -10,7 +10,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  * zhangbo
  */
 @Configuration
-@ComponentScan("mvc")
+@ComponentScan("mvc.controller")
 public class MvcConfig extends WebMvcConfigurationSupport{
 
     @Override

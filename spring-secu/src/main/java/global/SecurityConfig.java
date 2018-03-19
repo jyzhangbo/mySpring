@@ -1,6 +1,10 @@
 package global;
 
-import jdk.nashorn.internal.runtime.arrays.AnyElements;
+import global.MyPasswordEncoder;
+import global.MyUserDetailService;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -12,7 +16,7 @@ import org.springframework.stereotype.Component;
 /**
  * zhangbo
  */
-@Component
+@Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
@@ -33,11 +37,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .logout().logoutSuccessUrl("/").logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
     }
 
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        /*auth.inMemoryAuthentication().passwordEncoder(new MyPasswordEncoder())
+        auth.inMemoryAuthentication().passwordEncoder(new MyPasswordEncoder())
                 .withUser("user").password("123").roles("USER").and()
-                .withUser("admin").password("111").roles("USER","ADMIN");*/
+                .withUser("admin").password("111").roles("USER","ADMIN");
         /* ldap暂时还不好使
         auth.ldapAuthentication().userSearchFilter("(uid={0})")
                 .groupSearchFilter("member={0}")
@@ -45,7 +55,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .url("ldap://tds02.xinaogroup.com:389/DC=ENN,DC=COM").managerDn("cn=users")
                 .managerPassword("000");*/
 
-        auth.userDetailsService(new MyUserDetailService()).passwordEncoder(new MyPasswordEncoder());
+       //auth.userDetailsService(new MyUserDetailService()).passwordEncoder(new MyPasswordEncoder());
 
     }
 }
