@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import service.HomeService;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * zhangbo
  */
@@ -25,7 +28,11 @@ public class HomeController {
     @RequestMapping("home")
     public String home(){
         System.out.println("进入control");
-        homeService.home();
+        List<String> list=new ArrayList<>();
+        list.add("user");
+        list.add("zhangbo");
+        List<String> strings = homeService.home6(list);
+
         return "home";
     }
 
