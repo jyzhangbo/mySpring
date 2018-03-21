@@ -21,6 +21,7 @@
         <module>spring-cache</module>
         <module>spring-rmi-server</module>
         <module>spring-rmi-client</module>
+        <module>spring-http-invoker</module>
     </modules>
 
 
