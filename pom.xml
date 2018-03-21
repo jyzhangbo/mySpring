@@ -22,6 +22,7 @@
         <module>spring-rmi-server</module>
         <module>spring-rmi-client</module>
         <module>spring-http-invoker</module>
+        <module>spring-rest</module>
     </modules>
 
 
