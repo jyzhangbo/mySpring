@@ -5,9 +5,9 @@ package com.github.web.model;
  */
 public class User {
 
-    private Integer id;
-    private String name;
-    private String address;
+    public Integer id;
+    public String name;
+    public String address;
 
     public Integer getId() {
         return id;
