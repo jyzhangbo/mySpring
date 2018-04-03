@@ -22,13 +22,43 @@ public class JmsSendTest {
     @Autowired
     private JmsOperations operations;
 
+
+    @Test
+    public void test3(){
+        User user=new User();
+        user.setId(3);
+        user.setName("zhangbo3");
+        user.setAddress("beijing3");
+        operations.convertAndSend(user);
+        try {
+            Thread.sleep(1000000l);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void test2(){
+        User user=new User();
+        user.setId(2);
+        user.setName("zhangbo2");
+        user.setAddress("beijing2");
+        operations.send(new MessageCreator() {
+            @Override
+            public Message createMessage(Session session) throws JMSException {
+                return session.createObjectMessage(user);
+            }
+        });
+    }
+
+
     @Test
     public void test1(){
         User user=new User();
         user.setId(1);
         user.setName("zhangbo");
         user.setAddress("beijing");
-        operations.send("spring.test", new MessageCreator() {
+        operations.send("spring.test1", new MessageCreator() {
             @Override
             public Message createMessage(Session session) throws JMSException {
                 return session.createObjectMessage(user);
