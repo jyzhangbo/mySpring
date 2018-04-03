@@ -26,6 +26,7 @@
         <module>spring-converter</module>
         <module>spring-jms</module>
         <module>spring-amqp</module>
+        <module>spring-websocket</module>
     </modules>
 
 
