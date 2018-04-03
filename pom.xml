@@ -25,6 +25,7 @@
         <module>spring-rest</module>
         <module>spring-converter</module>
         <module>spring-jms</module>
+        <module>spring-amqp</module>
     </modules>
 
 
