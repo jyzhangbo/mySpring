@@ -16,3 +16,7 @@
 #### spring-security是关于权限的，对应第九章
 
 [security需要注意提防](spring-secu/README.md)
+
+#### spring-amqp是关于高级消息队列，对应第十七章
+
+[AMQP介绍](spring-amqp/readme.MD)
