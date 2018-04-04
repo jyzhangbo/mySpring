@@ -1,6 +1,4 @@
-import com.github.web.model.User;
 import org.junit.Test;
-import org.omg.CORBA.INTERNAL;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;

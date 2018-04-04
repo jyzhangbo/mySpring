@@ -1,4 +1,4 @@
-import com.github.web.model.User;
+import com.github.root.model.User;
 import org.junit.Test;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

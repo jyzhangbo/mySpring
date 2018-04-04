@@ -1,7 +1,7 @@
 package com.github;
 
 import com.github.mvc.MvcConfig;
-import com.github.web.WebConfig;
+import com.github.root.WebConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**

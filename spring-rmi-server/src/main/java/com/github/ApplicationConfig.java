@@ -1,6 +1,6 @@
 package com.github;
 
-import com.github.web.config.WebConfig;
+import com.github.root.config.WebConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

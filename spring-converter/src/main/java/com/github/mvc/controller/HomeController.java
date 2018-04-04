@@ -1,18 +1,15 @@
 package com.github.mvc.controller;
 
-import com.github.web.model.Error;
-import com.github.web.model.NotFoundException;
-import com.github.web.model.User;
-import com.sun.net.httpserver.HttpsConfigurator;
+import com.github.root.model.Error;
+import com.github.root.model.NotFoundException;
+import com.github.root.model.User;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
